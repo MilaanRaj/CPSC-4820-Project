@@ -336,7 +336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: -93}
+  m_AnchoredPosition: {x: 0.0000030994415, y: -87.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &436342518
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9169811, g: 0.5771619, b: 0.192047, a: 1}
+  m_Color: {r: 0.4862745, g: 0.7294118, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1073,14 +1073,14 @@ RectTransform:
   m_GameObject: {fileID: 1347786236}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.7438474, y: 2.7438474, z: 2.7438474}
+  m_LocalScale: {x: 2.1800003, y: 2.1800003, z: 2.7438474}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 840853324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271.64087, y: 485.66095}
+  m_AnchoredPosition: {x: -225.51, y: 364.01}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1347786238
@@ -1117,10 +1117,10 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 2
   m_fontColorGradient:
-    topLeft: {r: 0.4474541, g: 1, b: 0.27843142, a: 1}
-    topRight: {r: 0.4474541, g: 1, b: 0.27843142, a: 1}
-    bottomLeft: {r: 1, g: 0.32095876, b: 0.27843142, a: 1}
-    bottomRight: {r: 1, g: 0.32095876, b: 0.27843142, a: 1}
+    topLeft: {r: 0.47450984, g: 0.5529412, b: 0.20784315, a: 1}
+    topRight: {r: 0.47450984, g: 0.5529412, b: 0.20784315, a: 1}
+    bottomLeft: {r: 0.24313727, g: 0.6, b: 0.2509804, a: 1}
+    bottomRight: {r: 0.24313727, g: 0.6, b: 0.2509804, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -1293,7 +1293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: -359}
+  m_AnchoredPosition: {x: 0, y: -245.75}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717700953
@@ -1365,7 +1365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19215682, g: 0.91764706, b: 0.6565755, a: 1}
+  m_Color: {r: 0.48584908, g: 0.7285241, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
