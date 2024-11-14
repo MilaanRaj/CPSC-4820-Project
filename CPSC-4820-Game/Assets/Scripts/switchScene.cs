@@ -13,6 +13,11 @@ public class switchSceneTo : MonoBehaviour
         SceneManager.LoadSceneAsync("Tutorial");
     }
 
+    public void TutorialAlternateView()
+    {
+        SceneManager.LoadSceneAsync("TutorialAlternateView");
+    }
+
     public void Levels(){
         SceneManager.LoadSceneAsync("Levels");
     }
