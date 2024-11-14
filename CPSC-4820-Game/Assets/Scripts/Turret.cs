@@ -77,9 +77,14 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
+        if (target == null)
+        {
+            return;  // Do not shoot if no valid target
+        }
+
         Debug.Log("Shoot");
-        GameObject bulletGo = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Bullet bullet = bulletGo.GetComponent<Bullet>();
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         if(bullet != null)
         {
@@ -92,4 +97,5 @@ public class Turret : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+
 }

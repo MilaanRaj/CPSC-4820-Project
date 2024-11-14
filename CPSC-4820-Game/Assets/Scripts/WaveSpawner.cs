@@ -12,7 +12,7 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveNumber = 1;
 
-
+    private int waveIndex = 0;
 
     private void Update()
     {

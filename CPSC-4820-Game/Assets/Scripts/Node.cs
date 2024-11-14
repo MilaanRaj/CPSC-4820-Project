@@ -11,14 +11,23 @@ public class Node : MonoBehaviour
     private Renderer rend;
     private Color startColor;
 
-    private void Start()
+    BuildManager buildManager;
+
+    void Start()
     {
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
+        
+        buildManager = BuildManager.instance;
     }
 
-    private void OnMouseDown()
+    void OnMouseDown()
     {
+        if (buildManager.GetTurretToBuild() == null)
+        {
+            return;
+        }
+
         if(turret != null)
         {
             Debug.Log("Can't place turret. Todo - Display on Screen");
@@ -26,16 +35,21 @@ public class Node : MonoBehaviour
         }
 
         //Build a turret
-        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
+        GameObject turretToBuild = buildManager.GetTurretToBuild();
         turret = (GameObject)Instantiate(turretToBuild, transform.position, transform.rotation);
     }
 
-    private void OnMouseEnter()
+    void OnMouseEnter()
     {
+        if (buildManager.GetTurretToBuild() == null)
+        {
+            return;
+        }
+
         GetComponent<Renderer>().material.color = hoverColor;
     }
 
-    private void OnMouseExit()
+    void OnMouseExit()
     {
         rend.material.color = startColor;
     }
