@@ -10,17 +10,30 @@ public class Bullet : MonoBehaviour
 
     public static int kelpCoins = 100;
 
-    public TextMeshPro ammountText;
+    private TextMeshProUGUI coinsText;
 
-
-    void UpdateAmountUI()
+    void Start()
     {
-        if (ammountText != null)
+        // Find the UI element with the tag "coins"
+        GameObject coinsUI = GameObject.FindGameObjectWithTag("coins");
+
+        if (coinsUI != null)
         {
-            ammountText.text = kelpCoins.ToString();
+            coinsText = coinsUI.GetComponent<TextMeshProUGUI>();
+        }
+        else
+        {
+            Debug.LogWarning("No UI element with tag 'coins' found!");
         }
     }
 
+    void UpdateAmountUI()
+    {
+        if (coinsText != null)
+        {
+            coinsText.text = kelpCoins.ToString();
+        }
+    }
 
     public void Seek(Transform _target)
     {
@@ -48,10 +61,8 @@ public class Bullet : MonoBehaviour
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
 
-    // Use OnTriggerEnter instead of OnCollisionEnter
     void OnTriggerEnter(Collider other)
     {
-
         if (other.CompareTag("GroundGrid"))
         {
             Debug.Log("Bullet ignored GroundGrid object: " + other.gameObject.name);
@@ -82,7 +93,7 @@ public class Bullet : MonoBehaviour
         // Update points
         kelpCoins += 10;
         Debug.Log("Kelp coins: " + kelpCoins);
-
+        UpdateAmountUI();
 
         // Destroy the enemy
         Destroy(enemy);
@@ -91,4 +102,3 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 }
-
