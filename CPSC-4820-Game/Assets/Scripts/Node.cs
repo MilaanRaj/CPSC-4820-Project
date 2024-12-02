@@ -36,7 +36,7 @@ public class Node : MonoBehaviour
 
         //Build a turret
         GameObject turretToBuild = buildManager.GetTurretToBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position, transform.rotation);
+        turret = (GameObject)Instantiate(turretToBuild, transform.position + new Vector3(0, 2.0f, 0), transform.rotation);
     }
 
     void OnMouseEnter()
