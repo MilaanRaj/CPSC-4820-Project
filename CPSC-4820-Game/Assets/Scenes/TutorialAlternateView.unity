@@ -4167,6 +4167,7 @@ GameObject:
   - component: {fileID: 206797114}
   - component: {fileID: 206797116}
   - component: {fileID: 206797117}
+  - component: {fileID: 206797118}
   m_Layer: 0
   m_Name: ScriptManager
   m_TagString: Untagged
@@ -4232,6 +4233,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 382586417}
+--- !u!114 &206797118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206797113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b30c1b81efc45a8857b4efdb66ff7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 70
+  impactEffect: {fileID: 0}
+  amountText: {fileID: 1513373194}
 --- !u!4 &207536469 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dc82426ccd5c6f045847776347bfb5ce, type: 3}

@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Bullet : MonoBehaviour
 {
@@ -10,14 +11,14 @@ public class Bullet : MonoBehaviour
 
     public static int kelpCoins = 100;
 
-    public TextMeshPro ammountText;
+    public TextMeshProUGUI amountText;
 
 
     void UpdateAmountUI()
     {
-        if (ammountText != null)
+        if (amountText != null)
         {
-            ammountText.text = kelpCoins.ToString();
+            amountText.text = kelpCoins.ToString();
         }
     }
 
@@ -82,7 +83,6 @@ public class Bullet : MonoBehaviour
         // Update points
         kelpCoins += 10;
         Debug.Log("Kelp coins: " + kelpCoins);
-
 
         // Destroy the enemy
         Destroy(enemy);
