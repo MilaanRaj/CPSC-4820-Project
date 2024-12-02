@@ -4189,6 +4189,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 9162385170389274877, guid: 7d6f9ec5c2a8f41dfacd566da6c84afb, type: 3}
   spawnPoint: {fileID: 1598307603}
   timeBetweenWaves: 5
+  waveNumber: 1
 --- !u!4 &206797115
 Transform:
   m_ObjectHideFlags: 0
@@ -14589,6 +14590,7 @@ GameObject:
   - component: {fileID: 802394106}
   - component: {fileID: 802394108}
   - component: {fileID: 802394107}
+  - component: {fileID: 802394109}
   m_Layer: 5
   m_Name: numero
   m_TagString: Untagged
@@ -14712,6 +14714,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802394105}
   m_CullTransparentMesh: 1
+--- !u!114 &802394109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802394105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b673b8c83b71d44288d824719a92cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wave: {fileID: 802394107}
+  waveNum: {fileID: 206797114}
 --- !u!1 &810919466
 GameObject:
   m_ObjectHideFlags: 0
