@@ -113,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5019428948505977253, guid: 85a289f366013499ab5580080a02da81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 5019428948505977253, guid: 85a289f366013499ab5580080a02da81, type: 3}
       propertyPath: m_LocalPosition.z
@@ -149,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5684467024985766687, guid: 85a289f366013499ab5580080a02da81, type: 3}
       propertyPath: m_Name
-      value: NewClownFish Variant
+      value: ClownFishturret
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

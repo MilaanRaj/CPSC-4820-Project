@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class Bullet : MonoBehaviour
 {
@@ -6,6 +7,20 @@ public class Bullet : MonoBehaviour
 
     public float speed = 70f;
     public GameObject impactEffect;
+
+    public static int kelpCoins = 100;
+
+    public TextMeshPro ammountText;
+
+
+    void UpdateAmountUI()
+    {
+        if (ammountText != null)
+        {
+            ammountText.text = kelpCoins.ToString();
+        }
+    }
+
 
     public void Seek(Transform _target)
     {
@@ -36,8 +51,12 @@ public class Bullet : MonoBehaviour
     // Use OnTriggerEnter instead of OnCollisionEnter
     void OnTriggerEnter(Collider other)
     {
-        // Debug statement to check if the trigger is detected
-        Debug.Log("Bullet hit something: " + other.gameObject.name);
+
+        if (other.CompareTag("GroundGrid"))
+        {
+            Debug.Log("Bullet ignored GroundGrid object: " + other.gameObject.name);
+            return; // Ignore and exit the method
+        }
 
         if (other.CompareTag("Enemy"))
         {
@@ -60,10 +79,16 @@ public class Bullet : MonoBehaviour
 
         Destroy(effectIns, 2f);  // Destroy the effect after 2 seconds
 
+        // Update points
+        kelpCoins += 10;
+        Debug.Log("Kelp coins: " + kelpCoins);
+
+
         // Destroy the enemy
-        // Destroy(enemy);
+        Destroy(enemy);
 
         // Destroy the bullet
         Destroy(gameObject);
     }
 }
+
