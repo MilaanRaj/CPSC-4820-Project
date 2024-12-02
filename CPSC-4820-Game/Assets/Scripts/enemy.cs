@@ -32,6 +32,6 @@ public class enemy : MonoBehaviour
         }
         wavepointindex++;
         target = Waypoints.points[wavepointindex];
-        Debug.Log(wavepointindex);
+        
     }
 }
