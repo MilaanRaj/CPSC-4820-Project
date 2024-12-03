@@ -9,7 +9,7 @@ public class healthText : MonoBehaviour
     public  healthBar healthObj;
     
     void Start(){
-        healthTxt.text = "20";
+        healthTxt.text = "3";
     }
     void Update(){
         healthTxt.text = (healthObj.health).ToString();

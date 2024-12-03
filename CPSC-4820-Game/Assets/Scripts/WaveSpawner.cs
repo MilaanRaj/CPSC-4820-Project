@@ -16,7 +16,7 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveIndex = 0;
 
-    public int maxWaves = 5;
+    public int maxWaves = 20;
 
     public Canvas winCanvas;
     public Canvas playCanvas;
@@ -36,16 +36,16 @@ public class WaveSpawner : MonoBehaviour
     IEnumerator SpawnWave()
     {
         Debug.Log("Wave Incoming!");
-        if ((waveNumber - 1) > maxWaves + 2){
+        if (waveNumber == 10){
             //handle win or loss logic here for now just assume win
             playCanvas.gameObject.SetActive(false);
             winCanvas.gameObject.SetActive(true);
         }
-        if ((waveNumber - 1) > maxWaves){
+        //if ((waveNumber - 1) > maxWaves){
             //set win canvas active here if we want no timer
-            yield return null;
-        }
-        else if ((waveNumber - 1) >= maxWaves){
+       //     yield return null;
+        //}
+        else if (waveNumber == 9){
             SpawnBoss();
         }
         else{
