@@ -109,7 +109,7 @@ public class Bullet : MonoBehaviour
         Destroy(effectIns, 2f);  // Destroy the effect after 2 seconds
 
         // Update points
-        kelpCoins += 10;
+        kelpCoins += 1;
         score += 10;
         UpdateAmountUI();
 
