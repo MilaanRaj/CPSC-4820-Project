@@ -16,7 +16,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
-        if(countDown <= 0)
+        if (countDown <= 0)
         {
             StartCoroutine(SpawnWave());
             countDown = timeBetweenWaves;

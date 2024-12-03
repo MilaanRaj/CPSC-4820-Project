@@ -9,9 +9,6 @@ public class switchSceneTo : MonoBehaviour
     public void MainMenu(){
         SceneManager.LoadSceneAsync("Main Menu");
     }
-    public void Tutorial(){
-        SceneManager.LoadSceneAsync("Tutorial");
-    }
     public void IntroScene()
     {
         SceneManager.LoadSceneAsync("IntroScene");
