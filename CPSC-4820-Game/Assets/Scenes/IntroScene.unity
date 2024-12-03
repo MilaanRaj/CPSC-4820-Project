@@ -224,6 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687252816}
   - component: {fileID: 687252815}
+  - component: {fileID: 687252817}
   m_Layer: 0
   m_Name: IntroManager
   m_TagString: Untagged
@@ -262,13 +263,44 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687252814}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 316.5, y: 260, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -342.43903, y: 144.39024, z: 0}
+  m_LocalScale: {x: 1.9512196, y: 1.9512196, z: 1.9512196}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1685521019}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &687252817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687252814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d20cbf00ecb9c4788324e8af24044c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slideTexts:
+  - text: It was like any other beautiful day beneath the ocean sea...
+    boxSize: {x: 0, y: 0}
+  - text: As a community of clownfish were living together in harmony...
+    boxSize: {x: 0, y: 0}
+  - text: Unbeknownst to them, MegaCorp was engaing in harmful environmental practices....
+    boxSize: {x: 0, y: 0}
+  - text: Leading to large amounts of pollution being scattered across the ocean...
+    boxSize: {x: 0, y: 0}
+  - text: Soon, the plastic reached the clownfish community, diminshing survival
+      chances...
+    boxSize: {x: 0, y: 0}
+  - text: While many were left to flee from the anemone they once called home...
+    boxSize: {x: 0, y: 0}
+  - text: Commander Clownfish called on his best to fight back against MegaCorp!
+    boxSize: {x: 0, y: 0}
+  typewriterSpeed: 0.05
+  textFadeDuration: 1
+  textBoxPrefab: {fileID: 6822648207018515796, guid: 7c1c1652df09c9444acb39e8ac56a43f, type: 3}
 --- !u!1 &805607585
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +604,7 @@ RectTransform:
   - {fileID: 2093915844}
   - {fileID: 2011066977}
   - {fileID: 805607588}
+  - {fileID: 687252816}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -637,7 +670,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -1183,4 +1216,3 @@ SceneRoots:
   - {fileID: 333994639}
   - {fileID: 1956611941}
   - {fileID: 1685521019}
-  - {fileID: 687252816}

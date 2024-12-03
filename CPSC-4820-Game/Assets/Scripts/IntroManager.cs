@@ -11,9 +11,11 @@ public class IntroManager : MonoBehaviour
     public CanvasGroup blackBackground;
     private int currentSlideIndex = -1;
     private bool isTransitioning = false;
+    private SlideTextManager textManager;
 
     void Start()
     {
+        textManager = GetComponent<SlideTextManager>();
         DontDestroyOnLoad(blackBackground.gameObject);
         blackBackground.alpha = 1;
         foreach (var slide in slides)
@@ -44,6 +46,7 @@ public class IntroManager : MonoBehaviour
 
         if (currentSlideIndex >= 0)
         {
+            yield return textManager.HideSlideText();
             yield return FadeBackground(0, 1);
             yield return FadeSlide(slides[currentSlideIndex], 1, 0);
         }
@@ -65,6 +68,7 @@ public class IntroManager : MonoBehaviour
         slides[currentSlideIndex].gameObject.SetActive(true);
         yield return FadeSlide(slides[currentSlideIndex], 0, 1);
         yield return FadeBackground(1, 0);
+        yield return textManager.ShowSlideText(currentSlideIndex);
 
         isTransitioning = false;
     }
