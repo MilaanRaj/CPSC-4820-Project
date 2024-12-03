@@ -551,7 +551,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1967923471}
         m_TargetAssemblyTypeName: switchSceneTo, Assembly-CSharp
-        m_MethodName: Tutorial
+        m_MethodName: IntroScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1155,7 +1155,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1967923471}
         m_TargetAssemblyTypeName: switchSceneTo, Assembly-CSharp
-        m_MethodName: Tutorial
+        m_MethodName: IntroScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1856,7 +1856,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1967923471}
         m_TargetAssemblyTypeName: switchSceneTo, Assembly-CSharp
-        m_MethodName: Tutorial
+        m_MethodName: IntroScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2904,7 +2904,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1967923471}
         m_TargetAssemblyTypeName: switchSceneTo, Assembly-CSharp
-        m_MethodName: Tutorial
+        m_MethodName: IntroScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3038,7 +3038,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1967923471}
         m_TargetAssemblyTypeName: switchSceneTo, Assembly-CSharp
-        m_MethodName: Tutorial
+        m_MethodName: IntroScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3277,7 +3277,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1967923471}
         m_TargetAssemblyTypeName: switchSceneTo, Assembly-CSharp
-        m_MethodName: Tutorial
+        m_MethodName: IntroScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
