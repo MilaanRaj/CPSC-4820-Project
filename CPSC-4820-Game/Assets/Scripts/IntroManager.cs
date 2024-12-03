@@ -1,54 +1,99 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class IntroManager : MonoBehaviour
 {
-    public Image[] slides; // Assign your slide images in the Inspector
-    public float slideDuration = 3f; // Time each slide stays on screen
-
-    private int currentSlideIndex = 0;
-    private float timer;
+    public Image[] slides;
+    public float slideDuration = 3f;
+    public float fadeDuration = 1f;
+    public CanvasGroup blackBackground;
+    private int currentSlideIndex = -1;
+    private bool isTransitioning = false;
 
     void Start()
     {
-        ShowSlide(0);
+        DontDestroyOnLoad(blackBackground.gameObject);
+        blackBackground.alpha = 1;
+        foreach (var slide in slides)
+        {
+            slide.gameObject.SetActive(false);
+        }
+        StartCoroutine(StartIntro());
+    }
+
+    IEnumerator StartIntro()
+    {
+        yield return new WaitForEndOfFrame();
+        yield return StartNextSlide();
     }
 
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= slideDuration)
+        if (!isTransitioning && currentSlideIndex >= 0 &&
+            Time.timeSinceLevelLoad >= (slideDuration + fadeDuration * 2) * (currentSlideIndex + 1))
         {
-            timer = 0f;
-            currentSlideIndex++;
-
-            if (currentSlideIndex >= slides.Length)
-            {
-                // Transition to the tutorial scene
-                TransitionToTutorial();
-                return;
-            }
-            else
-            {
-                ShowSlide(currentSlideIndex);
-            }
+            StartCoroutine(StartNextSlide());
         }
     }
 
-    void TransitionToTutorial()
+    IEnumerator StartNextSlide()
     {
-        SceneManager.LoadScene("TutorialAlternateView"); // Load the tutorial scene
-        Destroy(this.gameObject); // Immediately destroy the IntroManager object
-    }
+        isTransitioning = true;
 
-    void ShowSlide(int index)
-    {
-        // Loop through all slides and deactivate them
-        for (int i = 0; i < slides.Length; i++)
+        if (currentSlideIndex >= 0)
         {
-            slides[i].gameObject.SetActive(i == index); // Activate only the current slide
+            yield return FadeBackground(0, 1);
+            yield return FadeSlide(slides[currentSlideIndex], 1, 0);
         }
+
+        currentSlideIndex++;
+
+        if (currentSlideIndex >= slides.Length)
+        {
+            blackBackground.alpha = 1;
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("TutorialAlternateView");
+            while (!asyncLoad.isDone)
+            {
+                yield return null;
+            }
+            Destroy(blackBackground.gameObject);
+            yield break;
+        }
+
+        slides[currentSlideIndex].gameObject.SetActive(true);
+        yield return FadeSlide(slides[currentSlideIndex], 0, 1);
+        yield return FadeBackground(1, 0);
+
+        isTransitioning = false;
     }
 
+    IEnumerator FadeSlide(Image slide, float from, float to)
+    {
+        CanvasGroup canvasGroup = slide.GetComponent<CanvasGroup>();
+        if (canvasGroup == null) yield break;
+
+        float elapsedTime = 0f;
+        while (elapsedTime < fadeDuration)
+        {
+            canvasGroup.alpha = Mathf.Lerp(from, to, elapsedTime / fadeDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        canvasGroup.alpha = to;
+        if (to == 0) slide.gameObject.SetActive(false);
+    }
+
+    IEnumerator FadeBackground(float from, float to)
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < fadeDuration)
+        {
+            blackBackground.alpha = Mathf.Lerp(from, to, elapsedTime / fadeDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        blackBackground.alpha = to;
+    }
 }
