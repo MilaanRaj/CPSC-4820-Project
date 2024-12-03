@@ -12,6 +12,10 @@ public class switchSceneTo : MonoBehaviour
     public void Tutorial(){
         SceneManager.LoadSceneAsync("Tutorial");
     }
+    public void IntroScene()
+    {
+        SceneManager.LoadSceneAsync("IntroScene");
+    }
 
     public void TutorialAlternateView()
     {

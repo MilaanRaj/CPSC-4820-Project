@@ -385,7 +385,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 353795409}
         m_TargetAssemblyTypeName: switchSceneTo, Assembly-CSharp
-        m_MethodName: Tutorial
+        m_MethodName: IntroScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
