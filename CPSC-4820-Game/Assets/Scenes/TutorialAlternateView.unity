@@ -25027,7 +25027,7 @@ GameObject:
   - component: {fileID: 1513373194}
   m_Layer: 5
   m_Name: amount
-  m_TagString: Untagged
+  m_TagString: coins
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25071,7 +25071,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 100
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb49ef6fdb1a4f740b18b92b1a0707d7, type: 2}
   m_sharedMaterial: {fileID: -5636390502110979824, guid: cb49ef6fdb1a4f740b18b92b1a0707d7, type: 2}
@@ -25838,7 +25838,7 @@ GameObject:
   - component: {fileID: 1569938191}
   m_Layer: 5
   m_Name: numero
-  m_TagString: Untagged
+  m_TagString: score
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

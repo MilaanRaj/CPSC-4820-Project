@@ -9,13 +9,17 @@ public class Bullet : MonoBehaviour
     public GameObject impactEffect;
 
     public static int kelpCoins = 100;
+    public static int score = 0;
 
     private TextMeshProUGUI coinsText;
+    private TextMeshProUGUI scoreText;
 
     void Start()
     {
         // Find the UI element with the tag "coins"
         GameObject coinsUI = GameObject.FindGameObjectWithTag("coins");
+        //Find the UI element with the tag "score"
+        GameObject scoreUI = GameObject.FindGameObjectWithTag("score");
 
         if (coinsUI != null)
         {
@@ -25,6 +29,15 @@ public class Bullet : MonoBehaviour
         {
             Debug.LogWarning("No UI element with tag 'coins' found!");
         }
+
+        if (scoreUI != null)
+        {
+            scoreText = scoreUI.GetComponent<TextMeshProUGUI>();
+        }
+        else
+        {
+            Debug.LogWarning("No UI element with tag 'score' found!");
+        }
     }
 
     void UpdateAmountUI()
@@ -32,6 +45,11 @@ public class Bullet : MonoBehaviour
         if (coinsText != null)
         {
             coinsText.text = kelpCoins.ToString();
+        }
+
+        if(scoreText != null)
+        {
+            scoreText.text = score.ToString();
         }
     }
 
@@ -92,7 +110,7 @@ public class Bullet : MonoBehaviour
 
         // Update points
         kelpCoins += 10;
-        Debug.Log("Kelp coins: " + kelpCoins);
+        score += 10;
         UpdateAmountUI();
 
         // Destroy the enemy
