@@ -3421,8 +3421,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.48192775}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2032658423}
+  m_Children: []
   m_Father: {fileID: 630754921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -11046,6 +11045,7 @@ RectTransform:
   m_Children:
   - {fileID: 284956683}
   - {fileID: 162678443}
+  - {fileID: 2032658423}
   m_Father: {fileID: 2613840}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -33883,14 +33883,14 @@ RectTransform:
   m_GameObject: {fileID: 2032658422}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 16.151985, z: 7.1036663}
+  m_LocalScale: {x: 1, y: 8.075993, z: 3.4234543}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 162678443}
+  m_Father: {fileID: 630754921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 177.9, y: 2.13}
+  m_AnchoredPosition: {x: 94.140205, y: 79.014915}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2032658424
@@ -33907,10 +33907,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 2032658425}
   countDown: 1
-  time: 300
+  time: 60
   timeAllowed: 0
-  winCanvas: {fileID: 0}
-  UICanvas: {fileID: 0}
+  winCanvas: {fileID: 764684375}
+  UICanvas: {fileID: 2613839}
 --- !u!114 &2032658425
 MonoBehaviour:
   m_ObjectHideFlags: 0
