@@ -5,6 +5,8 @@ public class WaveSpawner : MonoBehaviour
 {
     public Transform enemyPrefab;
 
+    public Transform bossPrefab;
+
     public Transform spawnPoint;
 
     public float timeBetweenWaves = 5f;
@@ -13,6 +15,12 @@ public class WaveSpawner : MonoBehaviour
     public int waveNumber = 1;
 
     private int waveIndex = 0;
+
+    public int maxWaves = 5;
+
+    public Canvas winCanvas;
+    public Canvas playCanvas;
+
 
     private void Update()
     {
@@ -28,12 +36,25 @@ public class WaveSpawner : MonoBehaviour
     IEnumerator SpawnWave()
     {
         Debug.Log("Wave Incoming!");
+        if ((waveNumber - 1) > maxWaves + 2){
+            //handle win or loss logic here for now just assume win
+            playCanvas.gameObject.SetActive(false);
+            winCanvas.gameObject.SetActive(true);
+        }
+        if ((waveNumber - 1) > maxWaves){
+            //set win canvas active here if we want no timer
+            yield return null;
+        }
+        else if ((waveNumber - 1) >= maxWaves){
+            SpawnBoss();
+        }
+        else{
+            for (int i = 0; i < waveNumber; i++)
+            {
+                SpawnEnemy();
+                yield return new WaitForSeconds(0.5f);
 
-        for (int i = 0; i < waveNumber; i++)
-        {
-            SpawnEnemy();
-            yield return new WaitForSeconds(0.5f);
-
+            }
         }
         waveNumber++;
     }
@@ -41,5 +62,9 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+    }
+
+    void SpawnBoss(){
+        Instantiate(bossPrefab, spawnPoint.position, spawnPoint.rotation);
     }
 }

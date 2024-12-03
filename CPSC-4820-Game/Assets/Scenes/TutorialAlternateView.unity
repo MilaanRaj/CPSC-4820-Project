@@ -4277,9 +4277,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 9162385170389274877, guid: 7d6f9ec5c2a8f41dfacd566da6c84afb, type: 3}
+  bossPrefab: {fileID: 3274848881631639782, guid: 40d40d00d29c0974a979fd82edd2eef1, type: 3}
   spawnPoint: {fileID: 1598307603}
   timeBetweenWaves: 5
   waveNumber: 1
+  maxWaves: 2
+  winCanvas: {fileID: 764684378}
+  playCanvas: {fileID: 2613839}
 --- !u!4 &206797115
 Transform:
   m_ObjectHideFlags: 0

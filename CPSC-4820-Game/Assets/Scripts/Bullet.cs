@@ -8,11 +8,12 @@ public class Bullet : MonoBehaviour
     public float speed = 70f;
     public GameObject impactEffect;
 
-    public static int kelpCoins = 100;
+    public static int kelpCoins = 10;
     public static int score = 0;
 
     private TextMeshProUGUI coinsText;
     private TextMeshProUGUI scoreText;
+    
 
     void Start()
     {
