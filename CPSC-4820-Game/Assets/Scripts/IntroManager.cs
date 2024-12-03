@@ -38,7 +38,7 @@ public class IntroManager : MonoBehaviour
 
     void TransitionToTutorial()
     {
-        SceneManager.LoadScene("Tutorial"); // Load the tutorial scene
+        SceneManager.LoadScene("TutorialAlternateView"); // Load the tutorial scene
         Destroy(this.gameObject); // Immediately destroy the IntroManager object
     }
 
