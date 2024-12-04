@@ -4,6 +4,7 @@ public class healthBar : MonoBehaviour
 {
     public int health = 20; // Starting health
     public GameObject loseCanvas; // Reference to the Lose Canvas
+    public AudioSource audioSource;
 
     private void Start()
     {
@@ -38,6 +39,7 @@ public class healthBar : MonoBehaviour
         if (loseCanvas != null)
         {
             loseCanvas.SetActive(true);
+            audioSource.Stop();
             Debug.Log("Game Over! Lose Canvas displayed.");
         }
         else

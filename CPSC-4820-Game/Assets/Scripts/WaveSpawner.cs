@@ -9,6 +9,8 @@ public class WaveSpawner : MonoBehaviour
 
     public Transform spawnPoint;
 
+    public AudioSource audioSource;
+
     public float timeBetweenWaves = 5f;
     private float countDown = 2f;
 
@@ -40,6 +42,8 @@ public class WaveSpawner : MonoBehaviour
             //handle win or loss logic here for now just assume win
             playCanvas.gameObject.SetActive(false);
             winCanvas.gameObject.SetActive(true);
+            audioSource.Stop();
+
         }
         //if ((waveNumber - 1) > maxWaves){
             //set win canvas active here if we want no timer
